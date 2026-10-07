@@ -1,24 +1,47 @@
+import { Link, NavLink } from "react-router";
+
 const NavBar = () => {
   return (
-    <div className='navbar bg-base-100 shadow-sm'>
-      <div className='flex-1'>
-        <a className='btn btn-ghost text-xl' href='/'>
+    <div className="navbar bg-base-100 shadow-sm">
+      <div className="flex-1">
+        <Link className="btn btn-ghost text-xl" to="/">
           Travel Agency
-        </a>
+        </Link>
       </div>
-      <nav className='flex-none'>
-        <ul className='menu menu-horizontal px-1'>
+      <nav className="flex-none">
+        <ul className="menu menu-horizontal px-1">
           <li>
-            <a href='/'>Home</a>
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? "underline underline-offset-2" : ""
+              }
+              to="/"
+            >
+              Home
+            </NavLink>
           </li>
           <li>
-            <a href='/about'>About</a>
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? "underline underline-offset-2" : ""
+              }
+              to="/about"
+            >
+              About
+            </NavLink>
           </li>
           <li>
-            <a href='/destinations'>Destinations</a>
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? "underline underline-offset-2" : ""
+              }
+              to="/destinations"
+            >
+              Destinations
+            </NavLink>
           </li>
           <li>
-            <a href='/contact'>Contact</a>
+            <NavLink to="/contact">Contact</NavLink>
           </li>
         </ul>
       </nav>

@@ -1,30 +1,32 @@
+import { Link } from "react-router";
+
 const Footer = () => {
   return (
-    <footer className='footer sm:footer-horizontal bg-neutral text-neutral-content p-10'>
+    <footer className="footer sm:footer-horizontal bg-neutral text-neutral-content p-10">
       <nav>
-        <h2 className='footer-title'>Services</h2>
-        <a href='/destinations' className='link link-hover'>
+        <h2 className="footer-title">Services</h2>
+        <a href="/destinations" className="link link-hover">
           Destinations
         </a>
       </nav>
       <nav>
-        <h2 className='footer-title'>Company</h2>{' '}
-        <a href='/about' className='link link-hover'>
+        <h2 className="footer-title">Company</h2>{" "}
+        <Link to="/about" className="link link-hover">
           About
-        </a>
-        <a href='/contact' className='link link-hover'>
+        </Link>
+        <Link to="/contact" className="link link-hover">
           Contact
-        </a>
+        </Link>
       </nav>
       <nav>
-        <h2 className='footer-title'>Legal</h2>
-        <a className='link link-hover' href='#'>
+        <h2 className="footer-title">Legal</h2>
+        <a className="link link-hover" href="#">
           Terms of use
         </a>
-        <a className='link link-hover' href='#'>
+        <a className="link link-hover" href="#">
           Privacy policy
         </a>
-        <a className='link link-hover' href='#'>
+        <a className="link link-hover" href="#">
           Cookie policy
         </a>
       </nav>
